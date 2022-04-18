@@ -1,0 +1,9 @@
+<% if record.errors.any? %>
+  <ul class="notification is-danger is-light"> 
+    <% @product.errors.each do |error| %>
+     <li>
+     <strong> <%= error.full_message %> </strong>
+     </li>
+    <% end %>
+  </ul>
+  <% end %>

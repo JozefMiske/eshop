@@ -1,0 +1,45 @@
+<section id="products" class="columns">
+  <% @products.each do |product| %>
+    <div class="column">
+      <article class="card">
+        <%# THUMBNAIL %>
+        <header class="card-image">
+          <figure class="image">
+            <a href="<%= product_path product.id %>">
+              <% if product.image.attached? %>
+                <%= image_tag product.image.variant(:thumb), :alt => 'photo of product ' + product.title %>  
+              <% else %>
+                <%= image_tag image_path('catalina.jpg'), :class => 'default', :alt => 'photo of product' + product.title %>
+              <% end %>
+            </a>
+          </figure>
+        </header>
+        
+        <%# HEADER %>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">
+                <%= link_to product.title, product %> </p>
+              <p class="subtitle is-6">
+                <%= number_to_currency product.price, :unit => '€',  :delimiter => " ", :separator => ",", format: "%n %u" %> </p>
+            </div>
+          </div>
+
+          <%# ADD TO CART %>
+          <div class="block">
+            <a href="#" class="button is-link is-fullwidth">Add to cart</a>
+          </div>
+
+          <%# DESCRIPTION %>
+          <div class="content">
+            <%= product.description.to_plain_text.truncate(150) %>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  <% end %>
+</section>
+
+<%= link_to "New product", new_product_path, class: 'button is-dark' %>

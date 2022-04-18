@@ -1,0 +1,2 @@
+module ProductclearsHelper
+end

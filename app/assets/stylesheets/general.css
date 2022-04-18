@@ -1,0 +1,28 @@
+/**
+    *GENERAL
+*/
+body{
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+.title {
+    font-weight: 900;
+}
+
+/**
+ * FORM
+ */
+
+ form .is-grouped {
+    margin-top: 2rem;
+  }
+  
+  form .trix-content {
+    min-height: 12rem;
+  }
+  
+  .edit-links {
+    display: flex;
+    justify-content: space-between;
+  }

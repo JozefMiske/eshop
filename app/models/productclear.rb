@@ -1,0 +1,2 @@
+class Productclear < ApplicationRecord
+end

@@ -1,0 +1,45 @@
+/**
+ * PRODUCTS
+ */
+
+#products {
+  display: block;
+}
+
+.card .image {
+  height: 14rem;
+  overflow: hidden;
+}
+
+.card img {
+  min-height: 20rem;
+  object-fit: cover;
+}
+
+.card img.default {
+  transform: translateY(-40%);
+}
+
+@media screen and (min-width: 640px) {
+  #products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 860px) {
+  #products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 861px) {
+  #products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card .image{
+  height:20rem;
+  overflow: hidden;
+}
